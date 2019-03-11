@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+let NYTMostPopularAPIKey = "TBLtUx47bjWNo8yTXPDe6nGoZCvUG7kD"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

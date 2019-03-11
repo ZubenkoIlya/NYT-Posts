@@ -44,6 +44,8 @@ public class ElongationTransition: NSObject {
       for case let elongationViewController as ElongationViewController in navi.viewControllers {
         return elongationViewController
       }
+    } else if let tab = viewController as? UITabBarController, let elongationViewController = tab.selectedViewController as? ElongationViewController {
+      return elongationViewController
     } else if let elongationViewController = viewController as? ElongationViewController {
       return elongationViewController
     }
@@ -62,7 +64,7 @@ extension ElongationTransition: UIViewControllerAnimatedTransitioning {
   
   /// :nodoc:
   open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-    return presenting ? appearance.detailPresetingDuration : appearance.detailDismissingDuration
+    return presenting ? appearance.detailPresentingDuration : appearance.detailDismissingDuration
   }
   
   /// :nodoc:

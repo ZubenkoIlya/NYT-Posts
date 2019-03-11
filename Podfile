@@ -6,8 +6,9 @@ target 'NYT Posts' do
   use_frameworks!
 
   pod 'Alamofire', '4.8.1'
+  pod 'AlamofireImage'
   pod 'SwiftyJSON', '4.0.0'
   pod 'PageMenu'
-  pod 'ElongationPreview', '1.0.4'
+  pod 'ElongationPreview', '1.1.0'
 
 end
