@@ -13,9 +13,12 @@
 		9FAB2DBB2236B769006C65FA /* NYT_Posts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DB92236B769006C65FA /* NYT_Posts.xcdatamodeld */; };
 		9FAB2DBD2236B769006C65FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB2DBC2236B769006C65FA /* Assets.xcassets */; };
 		9FAB2DC02236B769006C65FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB2DBE2236B769006C65FA /* LaunchScreen.storyboard */; };
+		BF39A0E9092CA84AFFDC723B /* Pods_NYT_Posts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41766ECF6C55EA8D8C4FD54 /* Pods_NYT_Posts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37B04E55B6BFD441175D43CA /* Pods-NYT Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYT Posts.release.xcconfig"; path = "Target Support Files/Pods-NYT Posts/Pods-NYT Posts.release.xcconfig"; sourceTree = "<group>"; };
+		72CDBB91EFFFA12114561A60 /* Pods-NYT Posts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYT Posts.debug.xcconfig"; path = "Target Support Files/Pods-NYT Posts/Pods-NYT Posts.debug.xcconfig"; sourceTree = "<group>"; };
 		9FAB2DAF2236B769006C65FA /* NYT Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Posts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FAB2DB22236B769006C65FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FAB2DB42236B769006C65FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		9FAB2DBC2236B769006C65FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FAB2DBF2236B769006C65FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FAB2DC12236B769006C65FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C41766ECF6C55EA8D8C4FD54 /* Pods_NYT_Posts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYT_Posts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF39A0E9092CA84AFFDC723B /* Pods_NYT_Posts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82C1B88BD37EF14E86844EA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C41766ECF6C55EA8D8C4FD54 /* Pods_NYT_Posts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9FAB2DA62236B769006C65FA = {
 			isa = PBXGroup;
 			children = (
 				9FAB2DB12236B769006C65FA /* NYT Posts */,
 				9FAB2DB02236B769006C65FA /* Products */,
+				FB40ECDAC077F6900B306CE4 /* Pods */,
+				82C1B88BD37EF14E86844EA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = "NYT Posts";
 			sourceTree = "<group>";
 		};
+		FB40ECDAC077F6900B306CE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72CDBB91EFFFA12114561A60 /* Pods-NYT Posts.debug.xcconfig */,
+				37B04E55B6BFD441175D43CA /* Pods-NYT Posts.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FAB2DC42236B769006C65FA /* Build configuration list for PBXNativeTarget "NYT Posts" */;
 			buildPhases = (
+				DE8EFF1AB5783C8B90FE063D /* [CP] Check Pods Manifest.lock */,
 				9FAB2DAB2236B769006C65FA /* Sources */,
 				9FAB2DAC2236B769006C65FA /* Frameworks */,
 				9FAB2DAD2236B769006C65FA /* Resources */,
+				1D10A732A70E23200B0785A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D10A732A70E23200B0785A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYT Posts/Pods-NYT Posts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ElongationPreview/ElongationPreview.framework",
+				"${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ElongationPreview.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYT Posts/Pods-NYT Posts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE8EFF1AB5783C8B90FE063D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYT Posts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9FAB2DAB2236B769006C65FA /* Sources */ = {
@@ -276,6 +356,7 @@
 		};
 		9FAB2DC52236B769006C65FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72CDBB91EFFFA12114561A60 /* Pods-NYT Posts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +372,7 @@
 		};
 		9FAB2DC62236B769006C65FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37B04E55B6BFD441175D43CA /* Pods-NYT Posts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
