@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritePostsViewController" customModule="NYT_Posts" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="FgS-uw-MAJ" id="PYf-VF-f3W"/>
                 <outlet property="view" destination="RPC-yf-MFw" id="E3J-hK-1Ka"/>
             </connections>
         </placeholder>
@@ -21,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FgS-uw-MAJ">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.4108746298" green="0.38888920799999999" blue="0.45209290749999997" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="separatorColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
@@ -29,7 +30,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="e3O-NG-pDW" firstAttribute="bottom" secondItem="FgS-uw-MAJ" secondAttribute="bottom" id="PBA-bX-7CP"/>
-                <constraint firstItem="FgS-uw-MAJ" firstAttribute="top" secondItem="e3O-NG-pDW" secondAttribute="top" id="bWo-76-CuA"/>
+                <constraint firstItem="FgS-uw-MAJ" firstAttribute="top" secondItem="e3O-NG-pDW" secondAttribute="top" constant="-20" id="bWo-76-CuA"/>
                 <constraint firstItem="FgS-uw-MAJ" firstAttribute="leading" secondItem="e3O-NG-pDW" secondAttribute="leading" id="mBX-C6-nt0"/>
                 <constraint firstItem="e3O-NG-pDW" firstAttribute="trailing" secondItem="FgS-uw-MAJ" secondAttribute="trailing" id="w5x-PA-Kqc"/>
             </constraints>

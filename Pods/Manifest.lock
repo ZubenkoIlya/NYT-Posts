@@ -2,14 +2,12 @@ PODS:
   - Alamofire (4.8.1)
   - AlamofireImage (3.5.0):
     - Alamofire (~> 4.8)
-  - ElongationPreview (1.1.0)
   - PageMenu (2.0.0)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.8.1)
   - AlamofireImage
-  - ElongationPreview (= 1.1.0)
   - PageMenu
   - SwiftyJSON (= 4.0.0)
 
@@ -17,17 +15,15 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
-    - ElongationPreview
     - PageMenu
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
-  ElongationPreview: 1ed2dc13ce9e119d9265f54e1e37417aa826c5c1
   PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 4685d885991971af4b28fb9052a248fcb4f0ff1a
+PODFILE CHECKSUM: 925510447c8c46ccaf6ad4f30af3cbc3cca11a5c
 
 COCOAPODS: 1.6.0

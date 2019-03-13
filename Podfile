@@ -9,6 +9,5 @@ target 'NYT Posts' do
   pod 'AlamofireImage'
   pod 'SwiftyJSON', '4.0.0'
   pod 'PageMenu'
-  pod 'ElongationPreview', '1.1.0'
 
 end

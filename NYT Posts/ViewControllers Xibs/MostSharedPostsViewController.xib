@@ -12,30 +12,29 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MostSharedPostsViewController" customModule="NYT_Posts" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="y37-FG-ky0" id="Vp5-oZ-7vL"/>
+                <outlet property="tableView" destination="X71-5d-lKW" id="wVL-24-fvq"/>
+                <outlet property="view" destination="z5h-eC-TEH" id="gYW-PT-z6S"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="y37-FG-ky0">
+        <view contentMode="scaleToFill" id="z5h-eC-TEH">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TwA-ON-eEg">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                    <color key="backgroundColor" red="0.4108746298" green="0.38888920799999999" blue="0.45209290749999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="separatorColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="sectionIndexBackgroundColor" red="0.4108746298" green="0.38888920799999999" blue="0.45209290749999997" alpha="1" colorSpace="calibratedRGB"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X71-5d-lKW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="TwA-ON-eEg" firstAttribute="leading" secondItem="OWz-sp-tcZ" secondAttribute="leading" id="4Kz-gV-Ori"/>
-                <constraint firstItem="OWz-sp-tcZ" firstAttribute="bottom" secondItem="TwA-ON-eEg" secondAttribute="bottom" id="4f5-J1-nc7"/>
-                <constraint firstItem="OWz-sp-tcZ" firstAttribute="trailing" secondItem="TwA-ON-eEg" secondAttribute="trailing" id="iet-od-Uh2"/>
-                <constraint firstItem="TwA-ON-eEg" firstAttribute="top" secondItem="OWz-sp-tcZ" secondAttribute="top" id="sCD-YF-rVa"/>
+                <constraint firstItem="X71-5d-lKW" firstAttribute="bottom" secondItem="Mhj-Jq-rlz" secondAttribute="bottom" id="BUL-1j-ycB"/>
+                <constraint firstItem="X71-5d-lKW" firstAttribute="leading" secondItem="Mhj-Jq-rlz" secondAttribute="leading" id="flK-GG-emp"/>
+                <constraint firstItem="X71-5d-lKW" firstAttribute="top" secondItem="z5h-eC-TEH" secondAttribute="top" id="oFT-Jc-gSE"/>
+                <constraint firstItem="X71-5d-lKW" firstAttribute="trailing" secondItem="Mhj-Jq-rlz" secondAttribute="trailing" id="qgt-n2-gW0"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="OWz-sp-tcZ"/>
-            <point key="canvasLocation" x="-44" y="-149"/>
+            <viewLayoutGuide key="safeArea" id="Mhj-Jq-rlz"/>
+            <point key="canvasLocation" x="-153" y="-356"/>
         </view>
     </objects>
 </document>

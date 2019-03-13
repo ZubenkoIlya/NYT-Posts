@@ -19,21 +19,28 @@ class MainViewController: UIViewController, CAPSPageMenuDelegate {
         self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "AmericanTypewriter", size: 20)!]
         self.title = "The New York Times"
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         var controllerArray : [UIViewController] = []
         
-        let mostEmailedController : UIViewController = UIViewController(nibName: "MostEmailedPostsViewController", bundle: nil)
+        let mostEmailedController = MostEmailedPostsViewController()
+        mostEmailedController.mainNavigationController = self.navigationController
         mostEmailedController.title = "Most emailed"
         controllerArray.append(mostEmailedController)
         
-        let mostSharedController : UIViewController = UIViewController(nibName: "MostSharedPostsViewController", bundle: nil)
+        let mostSharedController = MostSharedPostsViewController()
+        mostSharedController.mainNavigationController = self.navigationController
         mostSharedController.title = "Most shared"
         controllerArray.append(mostSharedController)
         
-        let mostViewedController : UIViewController = UIViewController(nibName: "MostViewedPostsViewController", bundle: nil)
+        let mostViewedController = MostViewedPostsViewController()
+        mostViewedController.mainNavigationController = self.navigationController
         mostViewedController.title = "Most viewed"
         controllerArray.append(mostViewedController)
         
-        let favoritePostsController : UIViewController = UIViewController(nibName: "FavoritePostsViewController", bundle: nil)
+        let favoritePostsController = FavoritePostsViewController()
+        favoritePostsController.mainNavigationController = self.navigationController
         favoritePostsController.title = "Favorite"
         controllerArray.append(favoritePostsController)
         
@@ -50,15 +57,13 @@ class MainViewController: UIViewController, CAPSPageMenuDelegate {
         
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
         
-        self.view.addSubview(pageMenu!.view)
-        
         pageMenu!.delegate = self
+        self.view.addSubview(pageMenu!.view)
     }
     
     func willMoveToPage(_ controller: UIViewController, index: Int){}
     
     func didMoveToPage(_ controller: UIViewController, index: Int){}
-
 
 }
 

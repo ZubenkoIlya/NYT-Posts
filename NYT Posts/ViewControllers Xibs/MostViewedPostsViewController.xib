@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MostViewedPostsViewController" customModule="NYT_Posts" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="nof-Tp-pyM" id="g7W-dj-yGj"/>
                 <outlet property="view" destination="fWb-gc-Eio" id="Mhn-2r-ULq"/>
             </connections>
         </placeholder>
@@ -21,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nof-Tp-pyM">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" red="0.4108746298" green="0.38888920799999999" blue="0.45209290749999997" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="separatorColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.4108746298" green="0.38888920799999999" blue="0.45209290749999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -30,7 +31,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="A0R-Ee-Ikd" firstAttribute="bottom" secondItem="nof-Tp-pyM" secondAttribute="bottom" id="895-pr-szM"/>
-                <constraint firstItem="nof-Tp-pyM" firstAttribute="top" secondItem="A0R-Ee-Ikd" secondAttribute="top" id="DyT-Jh-igh"/>
+                <constraint firstItem="nof-Tp-pyM" firstAttribute="top" secondItem="A0R-Ee-Ikd" secondAttribute="top" constant="-20" id="DyT-Jh-igh"/>
                 <constraint firstItem="nof-Tp-pyM" firstAttribute="leading" secondItem="A0R-Ee-Ikd" secondAttribute="leading" id="dit-j0-4IE"/>
                 <constraint firstItem="A0R-Ee-Ikd" firstAttribute="trailing" secondItem="nof-Tp-pyM" secondAttribute="trailing" id="pfY-Qe-MQi"/>
             </constraints>
