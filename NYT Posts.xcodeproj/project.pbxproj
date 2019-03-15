@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F480A35223AD44300F43ABC /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F480A34223AD44300F43ABC /* PostsTableViewController.swift */; };
 		9F56601722394F73003782D5 /* GlobalAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56601622394F73003782D5 /* GlobalAlerts.swift */; };
 		9F56601A22395A38003782D5 /* ArticleWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F56601922395A38003782D5 /* ArticleWebView.swift */; };
 		9FAB2DB32236B769006C65FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DB22236B769006C65FA /* AppDelegate.swift */; };
@@ -16,17 +17,7 @@
 		9FAB2DBD2236B769006C65FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB2DBC2236B769006C65FA /* Assets.xcassets */; };
 		9FAB2DC02236B769006C65FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB2DBE2236B769006C65FA /* LaunchScreen.storyboard */; };
 		9FAB2DC92236C24C006C65FA /* MostEmailedPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB2DC82236C24C006C65FA /* MostEmailedPostsViewController.xib */; };
-		9FAB2DCC2236C2B7006C65FA /* MostSharedPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB2DCB2236C2B7006C65FA /* MostSharedPostsViewController.xib */; };
-		9FAB2DCE2236C2E2006C65FA /* MostViewedPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB2DCD2236C2E2006C65FA /* MostViewedPostsViewController.xib */; };
-		9FAB2DD02236C3F9006C65FA /* FavoritePostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB2DCF2236C3F9006C65FA /* FavoritePostsViewController.xib */; };
-		9FAB2DD32236D623006C65FA /* MostEmailedPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DD22236D623006C65FA /* MostEmailedPostsViewController.swift */; };
-		9FAB2DD52236D674006C65FA /* MostSharedPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DD42236D674006C65FA /* MostSharedPostsViewController.swift */; };
-		9FAB2DD72236D688006C65FA /* MostViewedPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DD62236D688006C65FA /* MostViewedPostsViewController.swift */; };
-		9FAB2DD92236D69B006C65FA /* FavoritePostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DD82236D69B006C65FA /* FavoritePostsViewController.swift */; };
-		9FAB2DDC2236F6AF006C65FA /* EmailedNewsPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DDB2236F6AF006C65FA /* EmailedNewsPost.swift */; };
 		9FAB2DDE2236F985006C65FA /* NewsPostJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DDD2236F985006C65FA /* NewsPostJSONParser.swift */; };
-		9FAB2DE02237A217006C65FA /* ViewedNewsPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DDF2237A217006C65FA /* ViewedNewsPost.swift */; };
-		9FAB2DE22237AAC3006C65FA /* SharedNewsPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DE12237AAC3006C65FA /* SharedNewsPost.swift */; };
 		9FAB2DE52237CD16006C65FA /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FAB2DE42237CD16006C65FA /* PostTableViewCell.xib */; };
 		9FAB2DE72237CD26006C65FA /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DE62237CD26006C65FA /* PostTableViewCell.swift */; };
 		9FAB2DEC2237E44B006C65FA /* NewsPostCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB2DEB2237E44B006C65FA /* NewsPostCoreDataManager.swift */; };
@@ -38,6 +29,7 @@
 /* Begin PBXFileReference section */
 		37B04E55B6BFD441175D43CA /* Pods-NYT Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYT Posts.release.xcconfig"; path = "Target Support Files/Pods-NYT Posts/Pods-NYT Posts.release.xcconfig"; sourceTree = "<group>"; };
 		72CDBB91EFFFA12114561A60 /* Pods-NYT Posts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYT Posts.debug.xcconfig"; path = "Target Support Files/Pods-NYT Posts/Pods-NYT Posts.debug.xcconfig"; sourceTree = "<group>"; };
+		9F480A34223AD44300F43ABC /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		9F56601622394F73003782D5 /* GlobalAlerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalAlerts.swift; sourceTree = "<group>"; };
 		9F56601922395A38003782D5 /* ArticleWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebView.swift; sourceTree = "<group>"; };
 		9FAB2DAF2236B769006C65FA /* NYT Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Posts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,17 +41,7 @@
 		9FAB2DBF2236B769006C65FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FAB2DC12236B769006C65FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FAB2DC82236C24C006C65FA /* MostEmailedPostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MostEmailedPostsViewController.xib; sourceTree = "<group>"; };
-		9FAB2DCB2236C2B7006C65FA /* MostSharedPostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MostSharedPostsViewController.xib; sourceTree = "<group>"; };
-		9FAB2DCD2236C2E2006C65FA /* MostViewedPostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MostViewedPostsViewController.xib; sourceTree = "<group>"; };
-		9FAB2DCF2236C3F9006C65FA /* FavoritePostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritePostsViewController.xib; sourceTree = "<group>"; };
-		9FAB2DD22236D623006C65FA /* MostEmailedPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostEmailedPostsViewController.swift; sourceTree = "<group>"; };
-		9FAB2DD42236D674006C65FA /* MostSharedPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostSharedPostsViewController.swift; sourceTree = "<group>"; };
-		9FAB2DD62236D688006C65FA /* MostViewedPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViewedPostsViewController.swift; sourceTree = "<group>"; };
-		9FAB2DD82236D69B006C65FA /* FavoritePostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePostsViewController.swift; sourceTree = "<group>"; };
-		9FAB2DDB2236F6AF006C65FA /* EmailedNewsPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailedNewsPost.swift; sourceTree = "<group>"; };
 		9FAB2DDD2236F985006C65FA /* NewsPostJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPostJSONParser.swift; sourceTree = "<group>"; };
-		9FAB2DDF2237A217006C65FA /* ViewedNewsPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewedNewsPost.swift; sourceTree = "<group>"; };
-		9FAB2DE12237AAC3006C65FA /* SharedNewsPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedNewsPost.swift; sourceTree = "<group>"; };
 		9FAB2DE42237CD16006C65FA /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		9FAB2DE62237CD26006C65FA /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		9FAB2DEB2237E44B006C65FA /* NewsPostCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPostCoreDataManager.swift; sourceTree = "<group>"; };
@@ -129,7 +111,6 @@
 				9F566018223950DA003782D5 /* WebView */,
 				9FAB2DED2237F7BC006C65FA /* Article View */,
 				9FAB2DE32237CCFA006C65FA /* Post Table View Cell */,
-				9FAB2DDA2236F66F006C65FA /* Data Models */,
 				9FAB2DE82237E3F9006C65FA /* Data Managers */,
 				9FAB2DD12236D5CE006C65FA /* ViewControllers classes */,
 				9FAB2DC72236C201006C65FA /* ViewControllers Xibs */,
@@ -148,9 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				9FAB2DC82236C24C006C65FA /* MostEmailedPostsViewController.xib */,
-				9FAB2DCB2236C2B7006C65FA /* MostSharedPostsViewController.xib */,
-				9FAB2DCD2236C2E2006C65FA /* MostViewedPostsViewController.xib */,
-				9FAB2DCF2236C3F9006C65FA /* FavoritePostsViewController.xib */,
 			);
 			path = "ViewControllers Xibs";
 			sourceTree = "<group>";
@@ -158,22 +136,9 @@
 		9FAB2DD12236D5CE006C65FA /* ViewControllers classes */ = {
 			isa = PBXGroup;
 			children = (
-				9FAB2DD22236D623006C65FA /* MostEmailedPostsViewController.swift */,
-				9FAB2DD42236D674006C65FA /* MostSharedPostsViewController.swift */,
-				9FAB2DD62236D688006C65FA /* MostViewedPostsViewController.swift */,
-				9FAB2DD82236D69B006C65FA /* FavoritePostsViewController.swift */,
+				9F480A34223AD44300F43ABC /* PostsTableViewController.swift */,
 			);
 			path = "ViewControllers classes";
-			sourceTree = "<group>";
-		};
-		9FAB2DDA2236F66F006C65FA /* Data Models */ = {
-			isa = PBXGroup;
-			children = (
-				9FAB2DDB2236F6AF006C65FA /* EmailedNewsPost.swift */,
-				9FAB2DDF2237A217006C65FA /* ViewedNewsPost.swift */,
-				9FAB2DE12237AAC3006C65FA /* SharedNewsPost.swift */,
-			);
-			path = "Data Models";
 			sourceTree = "<group>";
 		};
 		9FAB2DE32237CCFA006C65FA /* Post Table View Cell */ = {
@@ -274,13 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FAB2DEF2237F7F7006C65FA /* ArticleView.xib in Resources */,
-				9FAB2DCC2236C2B7006C65FA /* MostSharedPostsViewController.xib in Resources */,
 				9FAB2DC02236B769006C65FA /* LaunchScreen.storyboard in Resources */,
 				9FAB2DBD2236B769006C65FA /* Assets.xcassets in Resources */,
-				9FAB2DD02236C3F9006C65FA /* FavoritePostsViewController.xib in Resources */,
 				9FAB2DC92236C24C006C65FA /* MostEmailedPostsViewController.xib in Resources */,
 				9FAB2DB82236B769006C65FA /* Main.storyboard in Resources */,
-				9FAB2DCE2236C2E2006C65FA /* MostViewedPostsViewController.xib in Resources */,
 				9FAB2DE52237CD16006C65FA /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,19 +301,13 @@
 			files = (
 				9FAB2DB52236B769006C65FA /* MainViewController.swift in Sources */,
 				9FAB2DEC2237E44B006C65FA /* NewsPostCoreDataManager.swift in Sources */,
-				9FAB2DD52236D674006C65FA /* MostSharedPostsViewController.swift in Sources */,
-				9FAB2DE22237AAC3006C65FA /* SharedNewsPost.swift in Sources */,
 				9FAB2DB32236B769006C65FA /* AppDelegate.swift in Sources */,
 				9FAB2DF12237F8B1006C65FA /* ArticleView.swift in Sources */,
-				9FAB2DD92236D69B006C65FA /* FavoritePostsViewController.swift in Sources */,
 				9F56601722394F73003782D5 /* GlobalAlerts.swift in Sources */,
-				9FAB2DDC2236F6AF006C65FA /* EmailedNewsPost.swift in Sources */,
 				9FAB2DDE2236F985006C65FA /* NewsPostJSONParser.swift in Sources */,
-				9FAB2DE02237A217006C65FA /* ViewedNewsPost.swift in Sources */,
-				9FAB2DD32236D623006C65FA /* MostEmailedPostsViewController.swift in Sources */,
+				9F480A35223AD44300F43ABC /* PostsTableViewController.swift in Sources */,
 				9F56601A22395A38003782D5 /* ArticleWebView.swift in Sources */,
 				9FAB2DBB2236B769006C65FA /* NYT_Posts.xcdatamodeld in Sources */,
-				9FAB2DD72236D688006C65FA /* MostViewedPostsViewController.swift in Sources */,
 				9FAB2DE72237CD26006C65FA /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

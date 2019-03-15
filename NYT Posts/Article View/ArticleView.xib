@@ -25,6 +25,15 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTP-3K-o1e">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="qy8-B5-p8W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7e-aU-fCX">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
@@ -126,7 +135,7 @@
                 <outlet property="articleTitleLabel" destination="NtV-MS-6ci" id="CBF-Ap-Oe5"/>
                 <outlet property="articleView" destination="AwE-Et-pTn" id="fcC-vV-ie6"/>
                 <outlet property="toFavoriteBarButtonItem" destination="DZF-54-ZIC" id="zep-mh-pE8"/>
-                <outlet property="toFavoriteButton" destination="DZF-54-ZIC" id="2yg-QK-ap9"/>
+                <outlet property="visualEffectView" destination="WTP-3K-o1e" id="kR7-QD-Rpb"/>
             </connections>
             <point key="canvasLocation" x="-19.5" y="25.5"/>
         </view>

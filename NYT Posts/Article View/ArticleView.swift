@@ -10,26 +10,23 @@ import Foundation
 import UIKit
 
 protocol ArticleViewDelegate:class {
-    func toFavorites(emailedPost: EmailedNewsPost?, sharedPost: SharedNewsPost?, viewedPost: ViewedNewsPost?)
-    func showFullArticle(title: String, webLink: String, image: UIImage, abstract: String)
+    func addedFavorites()
+    func showFullArticle(post: Post, image: UIImage)
     func cancelButtonAction()
 }
 
 class ArticleView: UIView {
     
     @IBOutlet weak var articleView: UIView!
-    @IBOutlet weak var toFavoriteButton: UIBarButtonItem!
     @IBOutlet weak var toFavoriteBarButtonItem:UIBarButtonItem!
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var articleTitleLabel: UILabel!
     @IBOutlet weak var articleAbstractLabel: UILabel!
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
     weak var delegate: ArticleViewDelegate?
     
-    var emailedItem: EmailedNewsPost?
-    var viewedItem: ViewedNewsPost?
-    var sharedItem: SharedNewsPost?
-    var favoriteItem: FavoritePost?
+    var postItem: Post?
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
@@ -49,15 +46,14 @@ class ArticleView: UIView {
     }
     
     @IBAction func toFavoritesBarButtonAction(_ sender: UIBarButtonItem) {
-        if emailedItem != nil {
-            self.delegate?.toFavorites(emailedPost: emailedItem, sharedPost: nil, viewedPost: nil)
+        if postItem!.isFavorite != true {
             sender.isEnabled = false
-        } else if viewedItem != nil {
-            self.delegate?.toFavorites(emailedPost: nil, sharedPost: nil, viewedPost: viewedItem)
-            sender.isEnabled = false
-        } else if sharedItem != nil {
-            self.delegate?.toFavorites(emailedPost: nil, sharedPost: sharedItem, viewedPost: nil)
-            sender.isEnabled = false
+            
+            NewsPostCoreDataManager.shared.saveImageOnDevice(image: articleImageView!.image!) { (imagePath) in
+                NewsPostCoreDataManager.shared.savePostToCoreData(post: postItem!, imagePath: imagePath, closure: {
+                    self.delegate?.addedFavorites()
+                })
+            }
         } else {
             print("Some error in the ArticleView")
         }
@@ -66,15 +62,7 @@ class ArticleView: UIView {
     @IBAction func fullArticleBarButtonAction(_ sender: UIBarButtonItem) {
         self.delegate?.cancelButtonAction()
         
-        if emailedItem != nil {
-            self.delegate?.showFullArticle(title: emailedItem!.title, webLink: emailedItem!.url, image: articleImageView.image!, abstract: emailedItem!.abstract)
-        } else if viewedItem != nil {
-            self.delegate?.showFullArticle(title: viewedItem!.title, webLink: viewedItem!.url, image: articleImageView.image!, abstract: viewedItem!.abstract)
-        } else if sharedItem != nil {
-            self.delegate?.showFullArticle(title: sharedItem!.title, webLink: sharedItem!.url, image: articleImageView.image!, abstract: sharedItem!.abstract)
-        } else if favoriteItem != nil {
-            self.delegate?.showFullArticle(title: favoriteItem!.title!, webLink: favoriteItem!.webLink!, image: articleImageView.image!, abstract: favoriteItem!.abstract!)
-        }
+        self.delegate?.showFullArticle(post: postItem!, image: articleImageView.image!)
         
         closeView()
     }
@@ -85,10 +73,6 @@ class ArticleView: UIView {
     }
     
     func closeView() {
-        emailedItem = nil
-        viewedItem = nil
-        sharedItem = nil
-        favoriteItem = nil
         toFavoriteBarButtonItem.isEnabled = true
     }
     

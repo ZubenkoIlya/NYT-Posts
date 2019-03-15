@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 import CoreData
 
-var favoritePostsArray: [FavoritePost] = []
+var favoritePostsArray: [Post] = []
 
 class NewsPostCoreDataManager: NSObject, NSFetchedResultsControllerDelegate {
     
     static let shared = NewsPostCoreDataManager()
     
-    var fetchFavoritePostsResultController: NSFetchedResultsController<FavoritePost>!
+    var fetchFavoritePostsResultController: NSFetchedResultsController<Post>!
     
-    func getFavoriteDataFromCoreData(closure: @escaping() -> ()) {
+    func getFavoriteDataFromCoreData() {
         favoritePostsArray = []
-        let fetchRequest: NSFetchRequest<FavoritePost> = FavoritePost.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "addedToFavoriteDate", ascending: false)
+        let fetchRequest: NSFetchRequest<Post> = Post.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
@@ -33,7 +33,6 @@ class NewsPostCoreDataManager: NSObject, NSFetchedResultsControllerDelegate {
                 try fetchFavoritePostsResultController.performFetch()
                 if let fetchedObjects = fetchFavoritePostsResultController.fetchedObjects {
                     favoritePostsArray = fetchedObjects
-                    closure()
                 }
             } catch {
                 print(error)
@@ -64,22 +63,52 @@ class NewsPostCoreDataManager: NSObject, NSFetchedResultsControllerDelegate {
         }
     }
     
-    func savePostToCoreData(title: String, abstract: String, imagePath: String, weblink: String, closure: () -> ()) {
+    func savePostToCoreData(post: Post, imagePath: String, closure: () -> ()) {
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
-            let postModel = FavoritePost(context: appDelegate.persistentContainer.viewContext)
-            postModel.addedToFavoriteDate = Date()
-            postModel.title = title
-            postModel.imagePath = imagePath
-            postModel.abstract = abstract
-            postModel.webLink = weblink
+            let postModel = Post(context: appDelegate.persistentContainer.viewContext)
+            postModel.date = Date()
+            postModel.title = post.title
+            postModel.imageURL = imagePath
+            postModel.isFavorite = true
+            postModel.abstract = post.abstract
+            postModel.webLink = post.webLink
             appDelegate.saveContext()
             favoritePostsArray.append(postModel)
             
             favoritePostsArray = favoritePostsArray.sorted(by: {
-                $0.addedToFavoriteDate?.compare($1.addedToFavoriteDate!) == .orderedDescending
+                $0.date?.compare($1.date!) == .orderedDescending
             })
+            
+            self.markIsFavorite(post: post)
             
             closure()
         }
     }
+    
+    func markIsFavorite(post: Post) {
+        for emailedPost in emailedPostsArray {
+            if emailedPost.webLink == post.webLink {
+                emailedPost.isFavorite = true
+            }
+        }
+        
+        for viewedPost in viewedPostsArray {
+            if viewedPost.webLink == post.webLink {
+                viewedPost.isFavorite = true
+            }
+        }
+        
+        for sharedPost in sharedPostsArray {
+            if sharedPost.webLink == post.webLink {
+                sharedPost.isFavorite = true
+            }
+        }
+    }
 }
+
+
+
+
+
+
+

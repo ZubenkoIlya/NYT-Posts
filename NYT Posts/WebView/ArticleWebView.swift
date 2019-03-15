@@ -18,8 +18,8 @@ class ArticleWebView: UIViewController {
     
     var articleTitle: String?
     var image: UIImage?
-    var abstract: String?
     var url: String?
+    var post: Post?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ class ArticleWebView: UIViewController {
     
     @IBAction func addToBookmarksAction(_ sender: UIBarButtonItem) {
         NewsPostCoreDataManager.shared.saveImageOnDevice(image: image!) { (imagePath) in
-            NewsPostCoreDataManager.shared.savePostToCoreData(title: articleTitle!, abstract: abstract!, imagePath: imagePath, weblink: url!, closure: {
+            NewsPostCoreDataManager.shared.savePostToCoreData(post: post!, imagePath: imagePath, closure: {
                 GlobalAlerts.showAlertWithTitleAndAction(self, title: "Favorite", message: "This article added to Favorite folder!", closure: { (result) in
                     self.bookmarksButton.isEnabled = false
                 })

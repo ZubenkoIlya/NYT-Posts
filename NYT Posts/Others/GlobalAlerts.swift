@@ -13,7 +13,6 @@ class GlobalAlerts: NSObject {
             closure(true)
         }))
         
-        
         vc.present(refreshAlert, animated: true, completion: nil)
         
     }
