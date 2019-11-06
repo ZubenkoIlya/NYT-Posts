@@ -17,7 +17,7 @@ class MainViewController: UIViewController, CAPSPageMenuDelegate, PostsTableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "AmericanTypewriter", size: 20)!]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.font: UIFont(name: "AmericanTypewriter", size: 20)!]
         self.title = "The New York Times"
         
         NewsPostCoreDataManager.shared.getFavoriteDataFromCoreData()

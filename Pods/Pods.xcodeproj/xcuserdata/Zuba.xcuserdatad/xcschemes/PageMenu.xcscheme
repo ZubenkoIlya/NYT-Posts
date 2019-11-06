@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "59BB8738E416ED4BF7D52D31A2745347"
+               BlueprintIdentifier = "0523D78CECA152D81AB99CD8E2F79C89"
                BuildableName = "PageMenu.framework"
                BlueprintName = "PageMenu"
                ReferencedContainer = "container:Pods.xcodeproj">

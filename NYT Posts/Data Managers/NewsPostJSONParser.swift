@@ -71,20 +71,21 @@ class NewsPostJSONParser: NSObject, NSFetchedResultsControllerDelegate {
                 let url = post["url"].rawString() ?? ""
                 let title = post["title"].rawString() ?? ""
                 let abstract = post["abstract"].rawString() ?? ""
-                //let published_date = post["published_date"].rawString() ?? ""
                 
-                let media = post["media"].array
                 
-                let media_metadataArray = media![0]["media-metadata"].array
-                var media_metadata: [[String: JSON]] = []
-                for element in media_metadataArray! {
-                    media_metadata.append(element.dictionary!)
-                }
+                var url_media_metadata = "https://"
                 
-                var url_media_metadata = ""
-                for element in media_metadata {
-                    if element["format"]?.stringValue == "mediumThreeByTwo210" {
-                        url_media_metadata = element["url"]!.stringValue
+                if let media = post["media"].array {
+                    let media_metadataArray = media[0]["media-metadata"].array
+                    var media_metadata: [[String: JSON]] = []
+                    for element in media_metadataArray! {
+                        media_metadata.append(element.dictionary!)
+                    }
+                    
+                    for element in media_metadata {
+                        if element["format"]?.stringValue == "mediumThreeByTwo210" {
+                            url_media_metadata = element["url"]!.stringValue
+                        }
                     }
                 }
                 
